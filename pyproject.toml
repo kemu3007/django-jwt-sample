@@ -2,7 +2,20 @@
 line-length = 119
 
 [tool.mypy]
-plugins = ["mypy_django_plugin.main"]
+ignore_missing_imports = true
+disallow_subclassing_any = false
+disallow_any_generics = false
+plugins = [
+    "mypy_django_plugin.main", 
+    "mypy_drf_plugin.main"
+]
+exclude = [
+    "tests/"
+]
 
 [tool.django-stubs]
 django_settings_module = "src.apps.settings"
+
+[tool.isort]
+profile = "black"
+line_length = 119
