@@ -22,7 +22,7 @@ jobs:
         cache-dependency-path: 'requirements.dev.txt'
     - name: lint
       run: |
-        pip install -r requirements.dev.txt
+        pip install -r requirements.dev.txt -r requirements.txt
         make lint
         make typecheck
   test:
