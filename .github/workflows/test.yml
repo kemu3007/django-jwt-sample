@@ -36,5 +36,5 @@ jobs:
         cache-dependency-path: 'requirements.txt'
     - name: test
       run: |
-        pip install -r requirements.txt
+        pip install -r requirements.dev.txt -r requirements.txt
         make test
